@@ -5,7 +5,9 @@ class Buttons extends React.Component {
     return (
       <div>
         <button id="btn" onClick={this.props.onClick}>Random Quote</button>
-        <button id="btnMobile" onClick={this.props.onClick}>Rand</button>
+        <button id="btnMobile" onClick={this.props.onClick}>
+          <i className="fa fa-random"></i>
+        </button>
       </div>
     );
   }
