@@ -37,16 +37,16 @@ class App extends React.Component {
           quote: quote[0].content,
           title: quote[0].title
         });
-      }).then(this.display());
+      });
   }
 
-  display() {
-    var quote = this.state.quote;
-    var author = this.state.title;
+  // display() {
+  //   var quote = this.state.quote;
+  //   var author = this.state.title;
 
-    document.getElementById("quoteTxt").innerHTML = quote;
-    document.getElementById("author").innerHTML = "— " + author;
-  }
+  //   document.getElementById("quoteTxt").innerHTML = quote;
+  //   document.getElementById("author").innerHTML = "— " + author;
+  // }
   //Change background/ txt color on click
   changeBg() {
     var colors = ["#6ca3fc", "#996cfc", "#fc996c", "#fc6c6c"];
