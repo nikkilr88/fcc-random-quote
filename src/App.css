@@ -10,6 +10,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background 1.5s;
 }
 
 .quoteBox {
