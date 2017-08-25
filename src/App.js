@@ -13,8 +13,7 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-    var now = Date.now();
-    fetch(this.props.src + now)
+    fetch(this.props.src + Date.now())
       .then(response => {
         return response.json();
       })
@@ -27,8 +26,7 @@ class App extends React.Component {
   }
 
   getQuote() {
-    var now = Date.now();
-    fetch(this.props.src + now)
+    fetch(this.props.src + Date.now())
      .then(response => {
         return response.json();
       })
@@ -47,10 +45,12 @@ class App extends React.Component {
   //   document.getElementById("quoteTxt").innerHTML = quote;
   //   document.getElementById("author").innerHTML = "— " + author;
   // }
+  
   //Change background/ txt color on click
   changeBg() {
     var colors = ["#6ca3fc", "#996cfc", "#fc996c", "#fc6c6c"];
     var randColor = Math.floor(Math.random() * colors.length);
+    
     document.body.style.background = colors[randColor];
     document.getElementById('btn').style.color = colors[randColor];
     document.getElementById('btnMobile').style.color = colors[randColor];
@@ -66,8 +66,13 @@ class App extends React.Component {
     console.log(this.state);
     return (
       <div>
-        <QuoteBox quote={this.state.quote} author={this.state.title} />
-        <Buttons onClick={this.onClick} />
+        <QuoteBox 
+          quote={this.state.quote} 
+          author={this.state.title} 
+        />
+        <Buttons 
+          onClick={this.onClick} 
+        />
       </div>
     );
   }
